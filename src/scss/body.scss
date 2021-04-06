@@ -1,0 +1,284 @@
+@import "./common/index";
+
+body {
+  font-family: $font-family-default;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: $gray-800;
+  height: 100%;
+  .like-body {
+    margin-top: -$header-height;
+    padding-bottom: $footer-height;
+    @include media-sm {
+      margin-top: -$header-height-mo;
+      padding-bottom: $footer-height-mo;
+    }
+    .like-banner {
+      position: relative;
+      .like-banner-bg {
+        width: 100%;
+        @include media-sm {
+          display: none;
+        }
+      }
+      .like-banner-bg-mo {
+        display: none;
+        @include media-sm {
+          display: block;
+        }
+      }
+      .like-banner-tips {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        .like-banner-tips-img {
+          display: block;
+          margin: 0 auto;
+          box-sizing: border-box;
+          width: rem(1504);
+        }
+        > h2 {
+          font-size: rem(118);
+          font-weight: 600;
+          color: $white;
+          letter-spacing: 0;
+          text-align: center;
+          position: relative;
+          > span {
+            color: $primary;
+          }
+          .banner-ico {
+            position: absolute;
+            top: rem(-50);
+            left: 50%;
+            width: rem(100);
+          }
+          @include media-sm {
+            font-size: 42px;
+            .banner-ico {
+              left: 49%;
+              top: -20px;
+              width: 30px;
+            }
+          }
+        }
+        .like-banner-tips-words {
+          display: block;
+          box-sizing: border-box;
+          margin: 20px auto 0;
+          padding-left: rem(30);
+          padding-right: rem(424);
+          width: rem(1504);
+          font-size: rem(30);
+          color: #ffffff;
+          letter-spacing: 0;
+          text-align: left;
+          line-height: rem(40);
+          .terms-policy-order {
+            margin-bottom: rem(20);
+          }
+          @include media-sm {
+            padding-right: rem(30);
+            line-height: 1.5;
+            font-size: 18px;
+          }
+        }
+        .down-more-box {
+          box-sizing: border-box;
+          height: rem(110);
+          margin-top: rem(123);
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          .down-more {
+            display: block;
+            color: $white;
+            text-align: center;
+            text-decoration: none;
+            .down-arrow {
+              display: block;
+              margin: 10px auto 0;
+              width: rem(26);
+              min-width: 16px;
+            }
+            @include media-sm {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .like-download {
+      box-sizing: border-box;
+      padding-right: rem(629);
+      min-height: rem(850);
+      position: relative;
+      .left-download-tips {
+        padding: rem(166) rem(173) 0 rem(190);
+        .like-download-title {
+          box-sizing: border-box;
+          padding-bottom: rem(30);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+          font-size: rem(54);
+          color: $black;
+          letter-spacing: 0;
+          text-align: center;
+        }
+        .like-download-des {
+          box-sizing: border-box;
+          padding: rem(30) 0 rem(80) 0;
+          font-size: rem(30);
+          color: rgba(0, 0, 0, 0.50);
+          letter-spacing: 0;
+          text-align: left;
+          line-height: rem(40);
+          @include media-sm {
+            line-height: 1.5;
+          }
+        }
+        .like-download-btn {
+          box-sizing: border-box;
+          padding-left: rem(60);
+          padding-right: rem(60);
+          border-radius: rem(37.5);
+          height: rem(70);
+          line-height: rem(70);
+          text-decoration: none;
+          .download-store-icon {
+            display: inline-block;
+            box-sizing: border-box;
+            margin-right: 0.6em;
+            width: rem(40);
+            position: relative;
+            top: -2px;
+          }
+          @include media-sm {
+            min-width: 120px;
+            height: 48px;
+            line-height: 48px;
+          }
+        }
+      }
+      .right-download-show {
+        box-sizing: border-box;
+        padding-right: rem(200);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        .like-download-outer {
+          width: rem(429);
+        }
+        .download-swiper-show {
+          position: absolute;
+          bottom: rem(26);
+          left: rem(46);
+          width: rem(330);
+          height: rem(590);
+          z-index: 19;
+        }
+      }
+      @include media-sm {
+        min-height: 400px;
+        padding-right: 0;
+        .left-download-tips {
+          .like-download-title {
+            font-size: 16px;
+          }
+          .like-download-des {
+            font-size: 14px;
+          }
+          .like-download-btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            padding-left: rem(60);
+            padding-right: rem(60);
+            width: 160px;
+            border-radius: rem(37.5);
+            height: 48px;
+            line-height: 48px;
+            text-decoration: none;
+            .download-store-icon {
+              display: inline-block;
+              min-width: 20px;
+              box-sizing: border-box;
+              margin-right: 0.6em;
+              width: rem(40);
+              position: relative;
+              top: -2px;
+            }
+          }
+        }
+        .right-download-show {
+          padding: 0;
+          margin-top: 24px;
+          margin-bottom: -38px;
+          position: relative;
+          top: 0;
+          left: 0;
+          .like-download-outer {
+            width: 100%;
+          }
+          .download-swiper-show {
+            position: absolute;
+            top: 12%;
+            left: 12%;
+            width: 75%;
+            height: 30%;
+            z-index: 19;
+          }
+        }
+      }
+    }
+    .like-terms-policy {
+      margin-top: rem(-30);
+      background-color: $section-bg;
+      position: relative;
+      z-index: 20;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .terms-policy-core {
+        width: rem(1300);
+        margin: 0 auto;
+        .terms-policy-title {
+          margin: rem(60) 0;
+          font-size: rem(54);
+          color: $black;
+          letter-spacing: 0;
+          text-align: center;
+        }
+        .terms-policy-content {
+          margin-bottom: rem(60);
+          font-size: rem(30);
+          color: rgba(0, 0, 0, 0.50);
+          letter-spacing: 0;
+          text-align: left;
+          line-height: rem(40);
+          @include media-sm {
+            line-height: 1.5;
+          }
+        }
+        @include media-sm {
+          box-sizing: border-box;
+          padding: 0 36px;
+          width: 100%;
+          .terms-policy-title {
+            margin: 30px;
+            font-size: 16px;
+          }
+          .terms-policy-content {
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+

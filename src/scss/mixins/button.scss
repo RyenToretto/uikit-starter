@@ -1,0 +1,90 @@
+@import "../common/index";
+
+@mixin button-mixin() {
+    .btn {
+        display: inline-block;
+        padding: 0 18px;
+        height: 32px;
+        line-height: 32px;
+        transition: 300ms;
+        font-weight: 400;
+
+        color: $white;
+        background-color: $primary;
+        border: 1px solid $primary;
+
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        &:hover,
+        &:focus {
+            background-color: $hover-link-deep;
+            color: $white;
+        }
+
+        &.btn-lg {
+            font-size: 16px;
+            height: 48px;
+            line-height: 48px;
+        }
+
+        &.btn-outline {
+            color: $primary;
+            background-color: $white;
+            &:hover,
+            &:focus {
+                color: $white;
+                background-color: $hover-link-deep;
+            }
+        }
+        &.should-reverse-color {
+            color: $white;
+            background-color: $primary;
+            &.btn-outline {
+                color: $primary;
+                background-color: $white;
+                border-color: $primary;
+                &:hover,
+                &:focus {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+            &.opacity-bg {
+                color: $white;
+                background-color: transparent;
+                border-color: $white;
+                &:hover,
+                &:focus {
+                    background-color: $primary;
+                    color: $white;
+                }
+                &:focus {
+                    background-color: transparent;
+                    color: $white;
+                }
+            }
+        }
+        &.primary-green-btn {
+            color: $white;
+            background-color: $primary-green;
+            border-color: $white;
+            &:hover,
+            &:focus {
+                background-color: $primary-green-hover;
+                color: $white;
+            }
+        }
+        &.primary-black-btn {
+            color: $white;
+            background-color: $black;
+            border-color: $white;
+            &:hover,
+            &:focus {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}

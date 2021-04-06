@@ -1,0 +1,37 @@
+@import "./func";
+
+$white: #ffffff;
+$black: #000000;
+
+$primary: #ff6076;
+$primary-hover: #d85d72;
+$primary-dark: #ff6077;
+$primary-dark-hover: #ee5d6f;
+$primary-btn-shadow: #ff6076;
+$primary-btn-shadow: rgba(255, 96, 118, 0.47);
+
+$primary-green: #65d072;
+$primary-green-hover: #4fcd6d;
+$primary-green-dark: #66d073;
+$primary-green-dark-hover: #51e86d;
+$primary-green-btn-shadow: #66d073;
+$primary-green-btn-shadow: rgba(102, 208, 115, 0.47);
+
+$gray-70: #fdfdfd; // 内容区域背景色，用于整个内容的背景色，sidebar 背景色
+$gray-80: #fafafa; // 选项鼠标移上去的背景色，主要用于表格 Hover 移上去的颜色 和表格的编号背景色,
+$gray-100: #f3f3f3; // 搜索框背景色，消息栏置顶色, 完成任务卡片颜色， Popbox Menu 移上去的背景色
+$gray-200: #eeeeee; // 模块左侧导航鼠标移上去的阴影, 次分割线，部分控件描边, 消息评论图标使用
+$gray-210: #e9e9e9; //整块区域的背景色为 #f3f3f3 后，某个卡片模块的背景色，用于文件详情
+$gray-300: #dddddd; // 主分割线, 进度条背景色，三级图标色
+$gray-400: #cacaca; // 搜索框默认文字， 禁用图标颜色, 部分图标颜色,
+$gray-500: #aaaaaa; // 添加参与人,负责人等操作图标的边框颜色,说明文字, 搜索框文字
+$gray-600: #888888; // 次要文字,如 Tab 切换文字
+$gray-700: #666666; // 主要文字
+$gray-800: #333333; // 标题和重点文字
+
+$font-family-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial,
+Hiragino Sans GB, sans-serif;
+$wrapper-width: 1200px;
+$placeholder-color: #888a9e;
+$hover-link-deep: $primary-hover;
+$icon-color: #a5a5a5;

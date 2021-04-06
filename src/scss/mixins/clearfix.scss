@@ -1,0 +1,12 @@
+@mixin clearfix-mixin() {
+    .clearfix {
+        zoom: 1;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

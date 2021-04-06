@@ -1,0 +1,10 @@
+@mixin unselected-able-mixin() {
+    .unselected-able {
+        /* 内容不可以被选中 */
+        // -webkit-user-select: none;
+        -webkit-user-select: auto;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
