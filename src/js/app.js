@@ -1,6 +1,7 @@
-import Swiper from 'swiper';
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
+import '../scss/app.scss'
+import Swiper from '../lib/swiper/js/swiper';
+import UIkit from '../lib/uikit/js/uikit';
+import Icons from '../lib/uikit/js/uikit-icons';
 
 UIkit.use(Icons); // loads the Icon plugin
 
