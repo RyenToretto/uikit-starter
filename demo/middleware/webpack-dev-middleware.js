@@ -1,4 +1,4 @@
-import * as WebpackDevMiddleware from 'webpack-dev-middleware'
+const WebpackDevMiddleware = require('webpack-dev-middleware');
 
 export const devMiddleware = (compiler, opts) => {
   const middleware = WebpackDevMiddleware(compiler, opts)
@@ -11,6 +11,6 @@ export const devMiddleware = (compiler, opts) => {
       setHeader: (name, value) => {
         ctx.set(name, value)
       }
-    })
+    }, next)
   }
 }

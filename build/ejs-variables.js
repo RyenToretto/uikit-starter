@@ -1,3 +1,3 @@
 module.exports = {
-    title: 'uikit-starter'
+    title: '嘿嘿'
 };

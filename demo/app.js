@@ -1,6 +1,7 @@
-import * as Koa from 'koa';
 import * as path from 'path';
-import * as Router from 'koa-router';
+
+const Koa = require('koa');
+const Router = require('koa-router');
 
 const app = new Koa();
 app.use(require('koa-static')(__dirname, './static'));
@@ -26,7 +27,7 @@ router
     .get('/', async (ctx) => {
         await ctx.render('index', {
             ...ejsVariables,
-            title: 'uikit-starter'
+            title: 'dione-worktile'
         });
     });
 

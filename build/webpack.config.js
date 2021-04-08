@@ -7,6 +7,7 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ejsVariables = require('../build/ejs-variables.js');
 
 const env = process.env.NODE_ENV || 'development';
 const isProd = env.includes('production');
@@ -15,9 +16,8 @@ const cdnPath = './'
 
 const generateLocalHost = env.includes('local-host');
 if (generateLocalHost || !isProd) {
-    ejsVariables.prefixWorktile = '/';
+    ejsVariables.prefix = '/';
 }
-const ejsVariables = require('../build/ejs-variables.js');
 
 
 const config = {
@@ -76,6 +76,7 @@ const config = {
                         loader: "url-loader",
                         options: {
                             limit: 8192,
+                            esModule: false,
                             publicPath: isProd ? cdnPath : './',
                             name: isProd ? 'static/img/[name].[hash:7].[ext]' : 'static/img/[name].[ext]'
                         }
