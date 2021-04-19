@@ -14,7 +14,7 @@
     "dev": "cross-env NODE_ENV=development PORT=8888 babel-node ./demo/index.js",
     "build": "npm run clear && npm run build:prod && npm run clear-maps",
     "clear": "del-cli dist",
-    "build:prod": "cross-env NODE_ENV=production webpack --mode=production --progress --hide-modules --devtool=source-maps  --config ./build/webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --mode=production --progress --hide-modules  --config ./build/webpack.config.js",
     "clear-maps": "rimraf dist/**/*.map"
   },
   "devDependencies": {

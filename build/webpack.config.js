@@ -30,7 +30,7 @@ const config = {
         filename: 'static/js/[name].js',
         publicPath: "./"
     },
-    devtool: "inline-source-map",
+    devtool: isProd ? false : 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
         disableHostCheck: true,
